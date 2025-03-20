@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const isProduction = mode === 'production';
   const baseUrl = isProduction 
-    ? 'https://codestakes-5gl6aaj2r-aadis-projects-ee189e65.vercel.app'
+    ? 'https://codestakes-o8q420lme-aadis-projects-ee189e65.vercel.app'
     : 'http://localhost:5001';
 
   return {
