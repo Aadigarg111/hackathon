@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "buildCommand": "cd client && npm install && npm run build",
+  "outputDirectory": "client/dist",
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist",
+        "buildCommand": "npm run build"
+      }
+    },
+    {
+      "src": "server/src/index.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/src/index.ts"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_URI": "your_mongodb_uri",
+    "JWT_SECRET": "your_jwt_secret",
+    "GITHUB_CLIENT_ID": "Ov23liSJDczKgJ9vlGJc",
+    "GITHUB_CLIENT_SECRET": "72623f12dfe5296e37d47d390ba225a03bf22a90",
+    "CLIENT_URL": "https://codestakes-9f7dui59d-aadis-projects-ee189e65.vercel.app",
+    "SERVER_URL": "https://codestakes-9f7dui59d-aadis-projects-ee189e65.vercel.app"
+  }
+} 
