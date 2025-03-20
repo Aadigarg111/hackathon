@@ -366,20 +366,23 @@ const HomePage = (): JSX.Element => {
                   ref={el => cardRefs.current[index] = el}
                   className={`relative w-[340px] ${
                     plan.popular ? "bg-[#1a1625]" : "bg-[#111827]"
-                  } border transition-all duration-300 ${
+                  } border transition-all duration-500 ${
                     plan.popular 
-                      ? "border-purple-500/30 after:absolute after:inset-0 after:rounded-xl after:shadow-[0_4px_40px_rgba(147,51,234,0.25),0_4px_80px_rgba(147,51,234,0.15)] after:-z-10" 
-                      : "border-gray-800/30"
-                  } rounded-xl overflow-hidden will-change-transform hover:shadow-[6px_6px_20px_rgba(147,51,234,0.15),12px_12px_40px_rgba(147,51,234,0.15)]`}
+                      ? "border-purple-500/40 after:absolute after:inset-0 after:rounded-xl after:shadow-[0_10px_70px_rgba(147,51,234,0.35),0_15px_100px_rgba(147,51,234,0.25)] after:-z-10" 
+                      : "border-gray-800/40"
+                  } rounded-xl overflow-hidden will-change-transform hover:shadow-[0_25px_90px_rgba(147,51,234,0.25),0_35px_130px_rgba(147,51,234,0.2)] hover:translate-y-[-8px]`}
                   style={{
                     transformStyle: 'preserve-3d',
+                    boxShadow: plan.popular 
+                      ? '0 8px 30px rgba(147,51,234,0.2), 0 12px 50px rgba(147,51,234,0.15), inset 0 1px 1px rgba(255,255,255,0.1), inset 0 -1px 1px rgba(0,0,0,0.1)' 
+                      : '0 8px 20px rgba(0,0,0,0.15), 0 12px 40px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.05), inset 0 -1px 1px rgba(0,0,0,0.05)'
                   }}
                 >
                   {plan.popular && (
                     <>
-                      <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-b from-purple-500/20 via-purple-500/10 to-transparent blur-sm" />
-                      <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-b from-purple-500/10 via-transparent to-transparent" />
-                      <Badge className="absolute top-4 right-4 px-3 py-1 bg-purple-600 text-white text-xs font-semibold z-10">
+                      <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-b from-purple-500/40 via-purple-500/20 to-transparent blur-md" />
+                      <div className="absolute -inset-[1px] rounded-xl bg-gradient-to-b from-purple-500/30 via-purple-500/15 to-transparent" />
+                      <Badge className="absolute top-4 right-4 px-3 py-1 bg-purple-600 text-white text-xs font-semibold z-10 shadow-[0_4px_15px_rgba(147,51,234,0.4)] rotate-[2deg]">
                         POPULAR
                       </Badge>
                     </>
@@ -403,7 +406,7 @@ const HomePage = (): JSX.Element => {
                       {plan.features.map((feature, i) => (
                         <li key={i} className="flex items-center gap-3">
                           <div className={`flex-shrink-0 w-5 h-5 rounded-full ${
-                            plan.popular ? "bg-purple-500/20" : "bg-gray-800"
+                            plan.popular ? "bg-purple-500/30 shadow-[0_2px_8px_rgba(147,51,234,0.25)]" : "bg-gray-800"
                           } flex items-center justify-center`}>
                             {plan.popular ? (
                               <CheckIcon className="w-3.5 h-3.5 text-purple-400" />
@@ -424,8 +427,8 @@ const HomePage = (): JSX.Element => {
                       variant={plan.buttonVariant}
                       className={`w-full py-6 text-base font-semibold transition-all duration-300 ${
                         plan.popular
-                          ? "bg-purple-600 hover:bg-purple-700 text-white shadow-[0_4px_15px_rgba(147,51,234,0.2)]"
-                          : "bg-gray-800/50 hover:bg-gray-700 text-white"
+                          ? "bg-purple-600 hover:bg-purple-700 text-white shadow-[0_8px_25px_rgba(147,51,234,0.3)] hover:shadow-[0_12px_30px_rgba(147,51,234,0.4)] hover:translate-y-[-2px]"
+                          : "bg-gray-800/50 hover:bg-gray-700 text-white hover:shadow-[0_8px_20px_rgba(0,0,0,0.15)] hover:translate-y-[-2px]"
                       }`}
                     >
                       {plan.buttonText}

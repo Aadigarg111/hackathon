@@ -6,7 +6,7 @@ export const Logo = () => {
     <Link to="/" className="group relative">
       <div className="flex items-center gap-2">
         <div className="relative w-8 h-8">
-          <div className="absolute inset-0 bg-purple-600 rounded-lg animate-pulse group-hover:animate-none"></div>
+          <div className="absolute inset-0 bg-purple-600 rounded-lg animate-pulse group-hover:animate-none shadow-[0_4px_15px_rgba(147,51,234,0.3)]"></div>
           <svg
             className="relative w-8 h-8"
             viewBox="0 0 32 32"

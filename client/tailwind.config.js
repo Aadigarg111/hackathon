@@ -67,14 +67,8 @@ module.exports = {
           to: { height: "0" },
         },
         glow: {
-          '0%, 100%': {
-            opacity: 1,
-            filter: 'drop-shadow(0 0 2px rgba(147, 51, 234, 0.5))',
-          },
-          '50%': {
-            opacity: 0.8,
-            filter: 'drop-shadow(0 0 5px rgba(147, 51, 234, 0.8))',
-          },
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.6' },
         },
         gradient: {
           '0%': { backgroundPosition: '0% 50%' },
