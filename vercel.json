@@ -31,7 +31,7 @@
     "JWT_SECRET": "your_jwt_secret",
     "GITHUB_CLIENT_ID": "Ov23liSJDczKgJ9vlGJc",
     "GITHUB_CLIENT_SECRET": "72623f12dfe5296e37d47d390ba225a03bf22a90",
-    "CLIENT_URL": "https://codestakes-9f7dui59d-aadis-projects-ee189e65.vercel.app",
-    "SERVER_URL": "https://codestakes-9f7dui59d-aadis-projects-ee189e65.vercel.app"
+    "CLIENT_URL": "https://codestakes-5gl6aaj2r-aadis-projects-ee189e65.vercel.app",
+    "SERVER_URL": "https://codestakes-5gl6aaj2r-aadis-projects-ee189e65.vercel.app"
   }
 } 
